@@ -1,0 +1,28 @@
+{
+  "name": "vanilla-tilt",
+  "version": "1.5.0",
+  "description": "A smooth 3D tilt javascript library forked from Tilt.js",
+  "main": "vanilla-tilt.js",
+  "module_es2015": "lib/vanilla-tilt.es2015.js",
+  "jsnext:main": "lib/vanilla-tilt.es2015.js",
+  "distrib": "dist/vanilla-tilt.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/micku7zu/vanilla-tilt.js.git"
+  },
+  "keywords": [
+    "tilt",
+    "effect",
+    "vanilla",
+    "js",
+    "60fps",
+    "smooth",
+    "tilt.js"
+  ],
+  "author": "Sergiu Șandor <micku7zu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/micku7zu/vanilla-tilt.js/issues"
+  },
+  "homepage": "https://github.com/micku7zu/vanilla-tilt.js#readme"
+}

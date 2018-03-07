@@ -1,0 +1,87 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/devil1991/.nvm/versions/node/v6.11.4/bin/node',
+1 verbose cli   '/Users/devil1991/.nvm/versions/node/v6.11.4/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.4
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/devil1991/Projects/vanilla-tilt.js/lib',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/devil1991/.npm/vanilla-tilt/1.5.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/devil1991/.npm correctMkdir not in flight; initializing
+10 info lifecycle vanilla-tilt@1.5.0~prepublish: vanilla-tilt@1.5.0
+11 silly lifecycle vanilla-tilt@1.5.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/devil1991/.npm/vanilla-tilt/1.5.0/package.tgz',
+12 verbose tar pack   '/Users/devil1991/Projects/vanilla-tilt.js/lib' ]
+13 verbose tarball /Users/devil1991/.npm/vanilla-tilt/1.5.0/package.tgz
+14 verbose folder /Users/devil1991/Projects/vanilla-tilt.js/lib
+15 verbose addLocalTarball adding from inside cache /Users/devil1991/.npm/vanilla-tilt/1.5.0/package.tgz
+16 verbose correctMkdir /Users/devil1991/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd vanilla-tilt@1.5.0
+18 verbose afterAdd /Users/devil1991/.npm/vanilla-tilt/1.5.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/devil1991/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/devil1991/.npm/vanilla-tilt/1.5.0/package/package.json written
+21 silly publish { name: 'vanilla-tilt',
+21 silly publish   version: '1.5.0',
+21 silly publish   description: 'A smooth 3D tilt javascript library forked from Tilt.js',
+21 silly publish   main: 'vanilla-tilt.js',
+21 silly publish   module_es2015: 'lib/vanilla-tilt.es2015.js',
+21 silly publish   'jsnext:main': 'lib/vanilla-tilt.es2015.js',
+21 silly publish   distrib: 'dist/vanilla-tilt.js',
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/micku7zu/vanilla-tilt.js.git' },
+21 silly publish   keywords: [ 'tilt', 'effect', 'vanilla', 'js', '60fps', 'smooth', 'tilt.js' ],
+21 silly publish   author: { name: 'Sergiu Șandor', email: 'micku7zu@gmail.com' },
+21 silly publish   license: 'MIT',
+21 silly publish   bugs: { url: 'https://github.com/micku7zu/vanilla-tilt.js/issues' },
+21 silly publish   homepage: 'https://github.com/micku7zu/vanilla-tilt.js#readme',
+21 silly publish   readme: '# vanilla-tilt.js\n\n[![npm version](https://badge.fury.io/js/vanilla-tilt.svg)](https://badge.fury.io/js/vanilla-tilt)\n[![ghit.me](https://ghit.me/badge.svg?repo=micku7zu/vanilla-tilt.js)](https://ghit.me/repo/micku7zu/vanilla-tilt.js)\n\nA smooth 3D tilt javascript library forked from [Tilt.js (jQuery version)](https://github.com/gijsroge/tilt.js).\n\n[View landing page (demos)](https://micku7zu.github.io/vanilla-tilt.js/)\n\n### Usage\n\n```html\n<body>\n<div class="your-element" data-tilt></div>\n\n<!-- at the end of the body -->\n<script type="text/javascript" src="vanilla-tilt.js"></script>\n</body>\n```\n\n### Options\n```js\n{\n    reverse:           false,  // reverse the tilt direction\n    max:               35,     // max tilt rotation (degrees)\n    perspective:       1000,   // Transform perspective, the lower the more extreme the tilt gets.\n    scale:             1,      // 2 = 200%, 1.5 = 150%, etc..\n    speed:             300,    // Speed of the enter/exit transition\n    transition:        true,   // Set a transition on enter/exit.\n    axis:              null,   // What axis should be disabled. Can be X or Y.\n    reset:             true    // If the tilt effect has to be reset on exit.\n    easing:            "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.\n    glare:             false   // if it should have a "glare" effect\n    "max-glare":       1,      // the maximum "glare" opacity (1 = 100%, 0.5 = 50%)\n    "glare-prerender": false   // false = VanillaTilt creates the glare elements for you, otherwise\n                               // you need to add .js-tilt-glare>.js-tilt-glare-inner by yourself\n}\n```\n\n### Events\n```js\nconst element = document.querySelector(".js-tilt");\nVanillaTilt.init(element);\nelement.addEventListener("tiltChange", callback);\n```\n\n### Methods\n```js\nconst element = document.querySelector(".js-tilt");\nVanillaTilt.init(element);\n\n// Destroy instance\nelement.vanillaTilt.destroy();\n\n// Get values of instance\nelement.vanillaTilt.getValues();\n\n// Reset instance\nelement.vanillaTilt.reset();\n```\n\n### Install\nYou can copy and include any of the following file:\n\n* [dist/vanilla-tilt.js](https://raw.githubusercontent.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.js) ~ 6kb\n* [dist/vanilla-tilt.min.js](https://raw.githubusercontent.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.min.js) ~ 3.5kb\n* [dist/vanilla-tilt.babel.js](https://raw.githubusercontent.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.babel.js) ~ 8.5kb\n* [dist/vanilla-tilt.babel.min.js](https://raw.githubusercontent.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.babel.min.js) ~ 4.3kb\n\n#### NPM\n\nAlso available on npm https://www.npmjs.com/package/vanilla-tilt\n\n```\nnpm install vanilla-tilt\n```\n\n#### Typings\n\nInstalling typings using npm\n```\nnpm install @types/vanilla-tilt\n```\n\n### Credits\n\nOriginal library: [Tilt.js](http://gijsroge.github.io/tilt.js/)\n\nOriginal library author: [Gijs Rogé](https://twitter.com/GijsRoge)\n\n### License\n\nMIT License\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   _id: 'vanilla-tilt@1.5.0',
+21 silly publish   scripts: {},
+21 silly publish   _shasum: 'f831eb57b08f24ed3d354cfdab3c8e32779c9aa7',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name vanilla-tilt
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.yarnpkg.com/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'vanilla-tilt',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'vanilla-tilt',
+26 silly mapToRegistry   name: 'vanilla-tilt',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.yarnpkg.com/vanilla-tilt
+28 verbose publish registryBase https://registry.yarnpkg.com/
+29 silly publish uploading /Users/devil1991/.npm/vanilla-tilt/1.5.0/package.tgz
+30 verbose stack Error: auth required for publishing
+30 verbose stack     at CachingRegistryClient.publish (/Users/devil1991/.nvm/versions/node/v6.11.4/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:30:14)
+30 verbose stack     at /Users/devil1991/.nvm/versions/node/v6.11.4/lib/node_modules/npm/lib/publish.js:138:14
+30 verbose stack     at mapToRegistry (/Users/devil1991/.nvm/versions/node/v6.11.4/lib/node_modules/npm/lib/utils/map-to-registry.js:62:3)
+30 verbose stack     at publish_ (/Users/devil1991/.nvm/versions/node/v6.11.4/lib/node_modules/npm/lib/publish.js:107:3)
+30 verbose stack     at Array.<anonymous> (/Users/devil1991/.nvm/versions/node/v6.11.4/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+30 verbose stack     at LOOP (/Users/devil1991/.nvm/versions/node/v6.11.4/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+30 verbose stack     at LOOP (/Users/devil1991/.nvm/versions/node/v6.11.4/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+30 verbose stack     at chain (/Users/devil1991/.nvm/versions/node/v6.11.4/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+30 verbose stack     at /Users/devil1991/.nvm/versions/node/v6.11.4/lib/node_modules/npm/lib/publish.js:73:5
+30 verbose stack     at RES (/Users/devil1991/.nvm/versions/node/v6.11.4/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+31 verbose cwd /Users/devil1991/Projects/vanilla-tilt.js/lib
+32 error Darwin 17.4.0
+33 error argv "/Users/devil1991/.nvm/versions/node/v6.11.4/bin/node" "/Users/devil1991/.nvm/versions/node/v6.11.4/bin/npm" "publish"
+34 error node v6.11.4
+35 error npm  v3.10.10
+36 error code ENEEDAUTH
+37 error need auth auth required for publishing
+38 error need auth You need to authorize this machine using `npm adduser`
+39 verbose exit [ 1, true ]
