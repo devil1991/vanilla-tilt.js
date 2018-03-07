@@ -49,6 +49,11 @@ export default class VanillaTilt {
     this.element.addEventListener("mouseenter", this.onMouseEnterBind);
     this.element.addEventListener("mousemove", this.onMouseMoveBind);
     this.element.addEventListener("mouseleave", this.onMouseLeaveBind);
+
+    this.element.addEventListener("touchstart", this.onMouseEnterBind);
+    this.element.addEventListener("touchmove", this.onMouseMoveBind);
+    this.element.addEventListener("touchend", this.onMouseLeaveBind);
+    this.element.addEventListener("touchcancel", this.onMouseLeaveBind);
     if (this.glare) {
       window.addEventListener("resize", this.onWindowResizeBind);
     }
@@ -58,6 +63,11 @@ export default class VanillaTilt {
     this.element.removeEventListener("mouseenter", this.onMouseEnterBind);
     this.element.removeEventListener("mousemove", this.onMouseMoveBind);
     this.element.removeEventListener("mouseleave", this.onMouseLeaveBind);
+
+    this.element.removeEventListener("touchstart", this.onMouseEnterBind);
+    this.element.removeEventListener("touchmove", this.onMouseMoveBind);
+    this.element.removeEventListener("touchend", this.onMouseLeaveBind);
+    this.element.removeEventListener("touchcancel", this.onMouseLeaveBind);
     if (this.glare) {
       window.removeEventListener("resize", this.onWindowResizeBind);
     }
